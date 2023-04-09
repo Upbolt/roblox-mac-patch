@@ -14,7 +14,7 @@ int main() {
                 auto data = binary.data() + section->offset;
                 
                 std::memset(data, 0x90, section->size);
-                std::memcpy(data, shell_code.data());
+                std::memcpy(data, shell_code.data(), shell_code.size());
             }
         }
     }
